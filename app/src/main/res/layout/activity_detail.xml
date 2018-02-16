@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.udacity.sandwichclub.DetailActivity">
+
+    <ImageView
+        android:id="@+id/image_iv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/sandwich_picture_content_description"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/label_main_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Sandwich Name" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_iv">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_also_known_as"
+                style="@style/detail_label_style"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:text="@string/detail_also_known_as_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_iv" />
+
+            <TextView
+                android:id="@+id/tv_also_known_as"
+                style="@style/detail_tv_style"
+                android:layout_width="match_parent"
+                android:contentDescription="@string/detail_also_known_as_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_also_known_as"
+                tools:text="alternative names come here" />
+
+            <TextView
+                android:id="@+id/label_place_of_origin"
+                style="@style/detail_label_style"
+                android:layout_width="match_parent"
+                android:text="@string/detail_place_of_origin_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_also_known_as" />
+
+            <TextView
+                android:id="@+id/tv_origin"
+                style="@style/detail_tv_style"
+                android:layout_width="match_parent"
+                android:contentDescription="@string/detail_place_of_origin_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_place_of_origin"
+                tools:text="place where the sandwich comes from" />
+
+            <TextView
+                android:id="@+id/label_ingredients"
+                style="@style/detail_label_style"
+                android:layout_width="match_parent"
+                android:text="@string/detail_ingredients_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_origin" />
+
+            <TextView
+                android:id="@+id/tv_ingredients"
+                style="@style/detail_tv_style"
+                android:layout_width="match_parent"
+                android:contentDescription="@string/detail_ingredients_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_ingredients"
+                tools:text="items from which you can make it" />
+
+            <TextView
+                android:id="@+id/label_description"
+                style="@style/detail_label_style"
+                android:layout_width="match_parent"
+                android:text="@string/detail_description_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ingredients" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                style="@style/detail_tv_style"
+                android:layout_width="match_parent"
+                android:contentDescription="@string/detail_description_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_description"
+                tools:text="how you can make it"
+                android:layout_marginBottom="12dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
